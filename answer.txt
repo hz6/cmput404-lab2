@@ -1,0 +1,14 @@
+Question 1: How do you specify a TCP socket in Python?
+The line "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)" is the constraint of TCP.
+
+Question 2: What is the difference between a client socket and a server socket in Python?
+The client socket is using "socket.connect((remoteIp, port))", the server socket is using "s.bind(Host, port)" instead.
+
+Question 3: How do we instruct the OS to let us reuse the same bind port?
+in 'echo_server.py' the line "s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)" is doing the job.
+
+Question 4: What information do we get about incoming connections?
+"Connected by (127.0.0.1, port number)" is printed
+
+Question 5: What is returned by recv() from the server after it is done sending the HTTP request?
+the message we sent to the server
