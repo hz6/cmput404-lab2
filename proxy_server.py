@@ -27,7 +27,7 @@ def main():
         s_start.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s_start.bind((HOST, PORT))
         s_start.listen(1)
-        while True:
+        while 1:
             connection, address = s_start.accept()
             print("Connected by:", address)
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s_end:

@@ -20,7 +20,7 @@ def main():
         s.listen(2)
 
         # continuously listen for connections
-        while True:
+        while 1:
             conn, addr = s.accept()
             print("Connected by", addr)
 
